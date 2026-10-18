@@ -24,7 +24,7 @@
 
 下载 CI 报告核实：72 项单测全部通过，无失败、错误或跳过；Debug / Release Lint 均为零问题。Wrapper 校验、两个变体的干净构建、Debug 签名与对齐、测试产物检查 / 上传均通过。CI 只提供测试 Debug APK，未获取正式密钥。
 
-[Beta 草稿](https://github.com/largebatata/NetToggle/releases/tag/untagged-b61cfb1baf8769605829)已创建，接口核实为 Draft + Pre-release，发布时间为空；仅维护者可见。正式 APK 上传前、服务器记录和回下载的 SHA-256 均与固定产物一致。没有 Publish。
+Beta 草稿已创建，可由维护者在[仓库 Releases 页面](https://github.com/largebatata/NetToggle/releases)查看；最终交付报告提供最新草稿直达地址。接口核实为 Draft + Pre-release，发布时间为空；仅维护者可见。正式 APK 上传前、服务器记录和回下载的 SHA-256 均与固定产物一致。没有 Publish。
 
 此报告的后续提交仅更新文档记录。交付前继续核对最终 main 的 CI，从最终 Git 快照导出源码 ZIP 并逐文件比较，再把草稿指向最终快照、核对全部资产。归档散列由草稿资产 `SHA256SUMS.txt` 提供，不在归档内记录其自身散列。最终提交与运行信息以最后的交付核对记录及仓库 Actions 为准。
 
