@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NetToggle" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:colorAccent">@color/nt_primary</item>
+        <item name="android:colorControlActivated">@color/nt_primary</item>
+        <item name="android:colorBackground">@color/nt_background</item>
+        <item name="android:windowBackground">@color/nt_background</item>
+        <item name="android:textColorPrimary">@color/nt_text</item>
+        <item name="android:textColorSecondary">@color/nt_secondary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- API 33 fallback uses the wallpaper-derived platform tonal palettes. -->
+    <color name="nt_background">@android:color/system_neutral1_10</color>
+    <color name="nt_surface">@android:color/system_neutral1_50</color>
+    <color name="nt_surface_high">@android:color/system_neutral1_100</color>
+    <color name="nt_text">@android:color/system_neutral1_900</color>
+    <color name="nt_secondary">@android:color/system_neutral2_700</color>
+    <color name="nt_primary">@android:color/system_accent1_600</color>
+    <color name="nt_primary_container">@android:color/system_accent1_100</color>
+    <color name="nt_on_primary_container">@android:color/system_accent1_900</color>
+    <color name="nt_outline">@android:color/system_neutral2_200</color>
+    <color name="nt_blocked_background">#FFF0EF</color>
+    <color name="nt_blocked_text">#A4322D</color>
+    <color name="nt_connected_background">#DEF3E2</color>
+    <color name="nt_connected_text">#23643E</color>
+    <color name="nt_warning_background">#FFF0CC</color>
+    <color name="nt_warning_text">#785900</color>
+</resources>

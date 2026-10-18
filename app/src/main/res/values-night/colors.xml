@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nt_background">@android:color/system_neutral1_900</color>
+    <color name="nt_surface">@android:color/system_neutral1_800</color>
+    <color name="nt_surface_high">@android:color/system_neutral1_700</color>
+    <color name="nt_text">@android:color/system_neutral1_100</color>
+    <color name="nt_secondary">@android:color/system_neutral2_300</color>
+    <color name="nt_primary">@android:color/system_accent1_200</color>
+    <color name="nt_primary_container">@android:color/system_accent1_800</color>
+    <color name="nt_on_primary_container">@android:color/system_accent1_100</color>
+    <color name="nt_outline">@android:color/system_neutral2_700</color>
+    <color name="nt_blocked_background">#342021</color>
+    <color name="nt_blocked_text">#FFB4AB</color>
+    <color name="nt_connected_background">#173923</color>
+    <color name="nt_connected_text">#A4DBB0</color>
+    <color name="nt_warning_background">#45331B</color>
+    <color name="nt_warning_text">#FFDCA0</color>
+</resources>
