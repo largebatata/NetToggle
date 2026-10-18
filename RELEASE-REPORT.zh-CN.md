@@ -18,7 +18,9 @@
 
 文档和源码副本已完成隐私清理，排除密钥、SDK 配置、缓存、日志及私人设备记录；运行时代码与 APK 保持原样。提交后仍须核对公开历史和源码 ZIP。
 
-已确认 GitHub 登录账号为 largebatata，目标仓库尚不存在。仓库创建、推送、首次 Commit SHA、Actions 真实运行、Release 草稿 URL 仍待远程执行和核验，不记作成功。
+已创建公开仓库 [largebatata/NetToggle](https://github.com/largebatata/NetToggle)，默认分支 main，识别为 Apache-2.0。首次提交：`cf4c3a044519dbb61bf86ced67af93514d618991`。
+
+[首次 Actions](https://github.com/largebatata/NetToggle/actions/runs/39128766155)在 SDK 安装阶段失败，原因是 setup-android 默认安装已不可用的旧 `tools` 包；已最小修改为显式安装 `platform-tools`，等待新运行结果。应用构建本身未在该次 CI 执行，不能称其已通过。Release 草稿仍待创建。
 
 后续须推送审核后的 main，记录首次 / 最终 SHA；从最终 Git 快照导出并校验源码 ZIP；检查 Actions 地址、提交和最终结果，失败则最小修复重验；再次核对原 APK 后创建 Draft + Pre-release 并核验上传资产。不得 Publish。
 
