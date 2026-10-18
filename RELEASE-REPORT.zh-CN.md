@@ -20,10 +20,18 @@
 
 已创建公开仓库 [largebatata/NetToggle](https://github.com/largebatata/NetToggle)，默认分支 main，识别为 Apache-2.0。首次提交：`cf4c3a044519dbb61bf86ced67af93514d618991`。
 
-[首次 Actions](https://github.com/largebatata/NetToggle/actions/runs/39128766155)在 SDK 安装阶段失败，原因是 setup-android 默认安装已不可用的旧 `tools` 包；已最小修改为显式安装 `platform-tools`，等待新运行结果。应用构建本身未在该次 CI 执行，不能称其已通过。Release 草稿仍待创建。
+[首次 Actions](https://github.com/largebatata/NetToggle/actions/runs/39128766155)在 SDK 安装阶段失败，原因是 setup-android 默认安装已不可用的旧 `tools` 包。显式指定 `platform-tools` 后，[修复后的真实运行](https://github.com/largebatata/NetToggle/actions/runs/39128922942)全部成功，对应提交 `89e8742fc6ba60169314a8ca9fb90dcdc34234ee`。
 
-后续须推送审核后的 main，记录首次 / 最终 SHA；从最终 Git 快照导出并校验源码 ZIP；检查 Actions 地址、提交和最终结果，失败则最小修复重验；再次核对原 APK 后创建 Draft + Pre-release 并核验上传资产。不得 Publish。
+下载 CI 报告核实：72 项单测全部通过，无失败、错误或跳过；Debug / Release Lint 均为零问题。Wrapper 校验、两个变体的干净构建、Debug 签名与对齐、测试产物检查 / 上传均通过。CI 只提供测试 Debug APK，未获取正式密钥。
+
+[Beta 草稿](https://github.com/largebatata/NetToggle/releases/tag/untagged-b61cfb1baf8769605829)已创建，接口核实为 Draft + Pre-release，发布时间为空；仅维护者可见。正式 APK 上传前、服务器记录和回下载的 SHA-256 均与固定产物一致。没有 Publish。
+
+此报告的后续提交仅更新文档记录。交付前继续核对最终 main 的 CI，从最终 Git 快照导出源码 ZIP 并逐文件比较，再把草稿指向最终快照、核对全部资产。归档散列由草稿资产 `SHA256SUMS.txt` 提供，不在归档内记录其自身散列。最终提交与运行信息以最后的交付核对记录及仓库 Actions 为准。
 
 ## 发布判断
 
-当前远程流程尚未完成，不满足公开 Beta Release 的全部条件；真实 CI、草稿与资产必须核验，最终公开还须所有者确认。单机人工测试不证明其他设备兼容。重启可能失效、共享 UID / appId / 多用户及内部接口限制详见 README；不为发布加入自动恢复、全局关闭链或后台监控。
+已成功核验的源码、CI、正式 APK 和用户人工测试支持小范围 Beta 试用；最终归档 / 草稿一致性仍须在交付时复核，**公开发布必须由所有者另行确认**。
+
+CI 当前有非阻断警告：固定的部分 Actions 声明 Node.js 20，GitHub 实际强制用 Node.js 24 运行；setup-java v4 已弃用。本次运行成功，后续应单独维护 Action 版本并重验，不在本轮继续扩大变更。
+
+单机人工测试不证明其他设备兼容。重启可能失效、共享 UID / appId / 多用户及内部接口限制详见 README；不为发布加入自动恢复、全局关闭链或后台监控。
